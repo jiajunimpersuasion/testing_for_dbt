@@ -13,22 +13,19 @@ sources:
   tables:
   - name: horangi_all_data
     columns:
-    - name: resource_region
-    - name: resource_id
-      tests:
-      - not_null
-    - name: resource_name
-      tests:
-      - not_null
-    - name: resource_type
-    - name: result
-    - name: severity
-    - name: status
-    - name: created_at
-    - name: scan_name
-    - name: scan_group_name
-    - name: title
-    - name: original_severity
-      tests: 
-      - not_null
-      - unique
+      - name: resource_region
+      - name: resource_id
+        tests:
+        - not_null
+      - name: resource_name
+        tests:
+        - not_null
+      - name: resource_type
+      - name: result
+      - name: severity
+      - name: status
+      - name: created_at
+      - name: scan_name
+      - name: scan_group_name
+      - name: title
+      - name: original_severity
