@@ -29,3 +29,4 @@ sources:
       - name: scan_group_name
       - name: title
       - name: original_severity
+        freshness: null
