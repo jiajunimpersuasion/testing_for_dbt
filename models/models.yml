@@ -1,48 +1,11 @@
 version: 2
 
 models:
-  - name: stg_affinity_based_clustering
+  - name: horangi_all_data
     columns:
-    - name: BITESCARDNO
-      tests:
-      - unique
-      - relationships:
-         to: ref('stg_memberprofile')
-         field: BITESCARDNO
-  - name: stg_category_based_clustering
-    columns:
-    - name: BITESCARDNO
-      tests:
-      - unique
-      - relationships:
-         to: ref('stg_memberprofile')
-         field: BITESCARDNO
-  - name: stg_memberpoints
-    columns:
-    - name: BITESCARDNO
-      tests:
-      - relationships:
-         to: ref('stg_memberprofile')
-         field: BITESCARDNO
-  - name: stg_memberprofile
-    columns:
-    - name: BITESCARDNO
-      tests:
-      - unique
-      - not_null
-  - name: fct_lifetime_transact
-    columns: 
-    - name: BITESCARDNO
-      tests:
-      - unique
-      - relationships:
-         to: ref('stg_memberprofile')
-         field: BITESCARDNO
-  - name: fct_member_profile
-    tests:
-    - dbt_utils.equal_rowcount:
-         compare_model: ref('stg_memberprofile')
-    columns: 
-    - name: BITESCARDNO
-      tests:
-      - unique
+      - name: resource_id
+        tests:
+        - not_null
+      - name: resource_name
+        tests:
+        - not_null
