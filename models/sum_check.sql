@@ -1,3 +1,6 @@
+{{ config(materialized='table') }}
+
+
 SELECT distinct(scan_name) as project_name, 
     count(title) as title_encounter,
     sum(case when severity = 'critical' then 1 else 0 end) as critical_severity, 
